@@ -4,6 +4,10 @@
 
 120/100
 
+**Rush-00**
+
+120/100
+
 **Day-00**
 
 Corrected by moulinette 12 days ago 5% 
