@@ -1,5 +1,9 @@
 ## 42-Piscine ##
 
+**Rush-00**
+
+120/100
+
 **Day-00**
 
 Corrected by moulinette 12 days ago 5% 
@@ -55,6 +59,18 @@ ex00: OK | ex01: OK | ex02: KO | ex03: OK | ex04: OK | ex05: Does not compile | 
 Corrected by moulinette 39 minutes ago 40% 
 ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: KO | ex06: Nothing turned in | ex07: Nothing turned in | ex08: Nothing turned in | ex09: Nothing turned in
 
+**Day-11**
+
+
+
+**Day-12**
+
+
+
+**Day-13**
+
+
+
 **Exam-00**
 
 75/100
@@ -63,6 +79,25 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: KO | ex06: Nothing 
 
 32/100
 
-**Rush-00**
+**Exam-02**
 
-120/100
+
+**EvalExpr**
+
+
+**Exam Final**
+
+
+**Match-N-Match**
+
+Corrected by moulinette 9 hours ago 0% 
+ex00: KO | ex01: Nothing turned in
+
+**Sastantua**
+
+Corrected by moulinette 9 hours ago 0% 
+ex00: Nothing turned in
+
+**BSQ**
+
+
