@@ -50,6 +50,11 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: Nothing turned in |
 Corrected by moulinette 2 days ago 40% 
 ex00: OK | ex01: OK | ex02: KO | ex03: OK | ex04: OK | ex05: Does not compile | ex06: Does not compile | ex07: OK | ex08: KO | ex09: KO | ex10: OK | ex11: OK | ex12: OK | ex13: Nothing turned in | ex14: Nothing turned in | ex15: Nothing turned in | ex16: Nothing turned in | ex17: KO | ex18: Nothing turned in | ex19: Nothing turned in | ex20: OK | ex21: Nothing turned in | ex22: OK | ex23: OK
 
+**Day-10**
+
+Corrected by moulinette 39 minutes ago 40% 
+ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: KO | ex06: Nothing turned in | ex07: Nothing turned in | ex08: Nothing turned in | ex09: Nothing turned in
+
 **Exam-00**
 
 75/100
