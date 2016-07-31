@@ -27,9 +27,9 @@ typedef struct		s_node
 void				ft_putchar(char c);
 t_node				*create_new_node(char c);
 void				add_node_end(t_node **head, char c);
-void				print_list(t_node *head);
 int					ft_list_size(t_node *head);
 void				assign(char *str, t_node *head);
 void				ft_putstr(char *str);
+void				clear_list(t_node **head);
 
 #endif

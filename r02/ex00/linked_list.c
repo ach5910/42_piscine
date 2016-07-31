@@ -37,18 +37,6 @@ void	add_node_end(t_node **head, char c)
 		*head = create_new_node(c);
 }
 
-void	print_list(t_node *head)
-{
-	t_node	*tmp;
-
-	tmp = head;
-	while (tmp != NULL)
-	{
-		ft_putchar(tmp->data);
-		tmp = tmp->next;
-	}
-}
-
 int		ft_list_size(t_node *head)
 {
 	t_node	*tmp;
@@ -77,4 +65,20 @@ void	assign(char *str, t_node *head)
 		i++;
 		tmp = tmp->next;
 	}
+}
+
+void	clear_list(t_node **head)
+{
+	t_node *tmp;
+
+	if (*head)
+	{
+		while ((*head)->next)
+		{
+			tmp = *head;
+			*head = (*head)->next;
+			free(tmp);
+		}
+	}
+	*head = NULL;
 }

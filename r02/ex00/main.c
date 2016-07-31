@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "rush_2.h"
-#include <stdio.h>
 
 int		find_x(char *str)
 {
@@ -52,10 +51,9 @@ int		main(void)
 		add_node_end(&head, buf);
 	str = (char*)malloc(sizeof(char) * ft_list_size(head));
 	assign(str, head);
+	clear_list(&head);
 	x = find_x(str);
 	y = find_y(str);
-	printf("%d\n", x);
-	printf("%d\n", y);
 	ft_putstr(str);
 	return (0);
 }
