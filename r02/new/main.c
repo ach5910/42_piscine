@@ -163,7 +163,6 @@ int		main(void)
 	str = (char*)malloc(sizeof(char) * ft_list_size(head) + 1);
 	assign(str, head);
 	clear_list(&head);
-	ft_putstr(str);
 	call_rush(str);
 	return (0);
 }
