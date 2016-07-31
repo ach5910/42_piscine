@@ -6,7 +6,7 @@ all: $(NAME)
 
 $(NAME):
 	gcc -c -Wall -Wextra -Werror $(SRC) 
-	gcc -o $(NAME) main.o ft_cat.o ft_putchar.o ft_putstr.o
+	gcc -o $(NAME) main.o linked_list.o ft_putstr.o
 
 clean:
 	/bin/rm -f main.o linked_list.o ft_putstr.o
