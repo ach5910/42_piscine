@@ -1,97 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/07/31 21:38:48 by hkalia            #+#    #+#             */
+/*   Updated: 2016/07/31 21:38:51 by hkalia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush_2.h"
-
-int		find_x(char *str)
-{
-	int		x;
-
-	x = 0;
-	while (str[x] != '\n')
-		x++;
-	return (x);
-}
-
-int		find_y(char *str)
-{
-	int		y;
-	int		i;
-
-	y = 0;
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\n')
-			y++;
-		i++;
-	}
-	return (y);
-}
-
-int		find_size(char **str)
-{
-	int		i;
-	int		j;
-	int		k;
-
-	k = 0;
-	i = 0;
-	while (str[i])
-	{
-		j = 0;
-		while (str[i][j] != '\n')
-		{
-			j++;
-			k++;
-		}
-		k++;
-		i++;
-	}
-	return (k);
-}
-
-char	*convert(char **str)
-{
-	char	*str1;
-	int		i;
-	int		j;
-	int		k;
-
-	str1 = (char*)malloc(sizeof(char) * find_size(str) + 1);
-	i = 0;
-	k = 0;
-	while (str[i])
-	{
-		j = 0;
-		while (str[i][j] != '\n')
-		{
-			str1[k] = str[i][j];
-			j++;
-			k++;
-		}
-		str1[k] = '\n';
-		k++;
-		i++;
-	}
-	return (str1);
-}
 
 void	call_rush(char *str)
 {
 	int		x;
 	int		y;
+	int		call;
 
+	call = 0;
 	x = find_x(str);
 	y = find_y(str);
 	if ((ft_strcmp(str, convert(rush00(x, y)))) == 0)
-		ft_putstr("Great SUCCESS 00");
+		print_res(0, x, y, call++);
 	if ((ft_strcmp(str, convert(rush01(x, y)))) == 0)
-		ft_putstr("Great SUCCESS 01");
+		print_res(1, x, y, call++);
 	if ((ft_strcmp(str, convert(rush02(x, y)))) == 0)
-		ft_putstr("Great SUCCESS 02");
+		print_res(2, x, y, call++);
 	if ((ft_strcmp(str, convert(rush03(x, y)))) == 0)
-		ft_putstr("Great SUCCESS 03");
+		print_res(3, x, y, call++);
 	if ((ft_strcmp(str, convert(rush04(x, y)))) == 0)
-		ft_putstr("Great SUCCESS 04");
-
+		print_res(4, x, y, call++);
+	if (call == 0)
+		ft_putstr("aucune");
+	ft_putchar('\n');
 }
 
 int		main(void)
