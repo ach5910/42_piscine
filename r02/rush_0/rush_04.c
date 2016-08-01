@@ -1,46 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   rush_04.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/30 21:39:40 by hkalia            #+#    #+#             */
-/*   Updated: 2016/07/30 21:39:42 by hkalia           ###   ########.fr       */
+/*   Created: 2016/07/31 20:35:17 by hkalia            #+#    #+#             */
+/*   Updated: 2016/07/31 20:35:19 by hkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush_2.h"
+#include "rush_0.h"
 
-void	ft_putchar(char c)
+char	**rush(int x, int y)
 {
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
+	char	**str;
+	int		tmp;
 	int		i;
 
+	tmp = y;
+	str = (char**)malloc(sizeof(char*) * (y + 1));
 	i = 0;
-	while (str[i])
+	if (x > 0 && y > 0)
 	{
-		ft_putchar(str[i]);
+		str[i] = ft_printline(x, 'A', 'B', 'C');
 		i++;
+		y--;
+		while (y > 1)
+		{
+			str[i] = ft_printline(x, 'B', ' ', 'B');
+			i++;
+			y--;
+		}
+		if (y == 1)
+			str[i] = ft_printline(x, 'C', 'B', 'A');
 	}
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] || s2[i])
-	{
-		if (s1[i] < s2[i])
-			return (-1);
-		if (s1[i] > s2[i])
-			return (1);
+	if (tmp != 1)
 		i++;
-	}
-	return (0);
+	str[i] = 0;
+	return (str);
 }

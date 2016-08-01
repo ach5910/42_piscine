@@ -1,70 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hkalia <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/30 15:30:22 by hkalia            #+#    #+#             */
-/*   Updated: 2016/07/30 15:30:24 by hkalia           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "rush_2.h"
-
-char	*ft_printline(int x, char fst, char mid, char lst)
-{
-	int		i;
-	char	*str;
-
-	str = (char*)malloc(sizeof(char) * (x + 1));
-	i = 0;
-	str[i] = fst;
-	i++;
-	x--;
-	while (x > 1)
-	{
-		str[i] = mid;
-		i++;
-		x--;
-	}
-	if (x == 1)
-	{
-		str[i] = lst;
-		i++;
-	}
-	str[i] = 10;
-	return (str);
-}
-
-char	**rush(int x, int y)
-{
-	char	**str;
-	int		tmp;
-	int		i;
-
-	tmp = y;
-	str = (char**)malloc(sizeof(char*) * (y + 1));
-	i = 0;
-	if (x > 0 && y > 0)
-	{
-		str[i] = ft_printline(x, 'o', '-', 'o');
-		i++;
-		y--;
-		while (y > 1)
-		{
-			str[i] = ft_printline(x, '|', ' ', '|');
-			i++;
-			y--;
-		}
-		if (y == 1)
-			str[i] = ft_printline(x, 'o', '-', 'o');
-	}
-	if (tmp != 1)
-		i++;
-	str[i] = 0;
-	return (str);
-}
 
 int		find_x(char *str)
 {
@@ -147,8 +81,17 @@ void	call_rush(char *str)
 
 	x = find_x(str);
 	y = find_y(str);
-	if ((ft_strcmp(str, convert(rush(x, y)))) == 0)
-		ft_putstr("SUCCESS");
+	if ((ft_strcmp(str, convert(rush00(x, y)))) == 0)
+		ft_putstr("Great SUCCESS 00");
+	if ((ft_strcmp(str, convert(rush01(x, y)))) == 0)
+		ft_putstr("Great SUCCESS 01");
+	if ((ft_strcmp(str, convert(rush02(x, y)))) == 0)
+		ft_putstr("Great SUCCESS 02");
+	if ((ft_strcmp(str, convert(rush03(x, y)))) == 0)
+		ft_putstr("Great SUCCESS 03");
+	if ((ft_strcmp(str, convert(rush04(x, y)))) == 0)
+		ft_putstr("Great SUCCESS 04");
+
 }
 
 int		main(void)
@@ -163,7 +106,6 @@ int		main(void)
 	str = (char*)malloc(sizeof(char) * ft_list_size(head) + 1);
 	assign(str, head);
 	clear_list(&head);
-	ft_putstr(str);
 	call_rush(str);
 	return (0);
 }
