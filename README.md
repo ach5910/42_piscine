@@ -82,6 +82,10 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: Nothing turned in |
 
 38/100
 
+**Exam Final**
+
+
+
 **Rush_00**
 
 120/100
@@ -98,9 +102,6 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: Nothing turned in |
 
 Corrected by moulinette 2 days ago 25% 
 ex00: Test 3 KO
-
-**Exam Final**
-
 
 **Match_N_Match**
 
